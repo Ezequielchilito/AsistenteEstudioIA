@@ -17,7 +17,6 @@ else:
 
 # Continúa aquí con la lógica de resumen y preguntas
 
-# ... (código anterior para carga de texto) ...
 from transformers import pipeline
 
 # Inicializa el pipeline de resumen una sola vez para que no se recargue
