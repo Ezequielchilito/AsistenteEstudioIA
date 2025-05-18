@@ -100,7 +100,7 @@ if summarizer is not None: # Solo muestra el botón si el modelo se cargó corre
                     # Los modelos tienen límites de token. Si el texto es muy largo, podría fallar o resumir solo el inicio.
                     # Para textos muy largos, necesitarías dividir el texto en chunks y resumir cada chunk.
                     # max_length y min_length controlan la longitud del resumen.
-                    summary_output = summarizer(text_content, max_length=200, min_length=50, do_sample=False)
+                    summary_output = summarizer(text_content, max_length=250, min_length=80, do_sample=False)
                     st.subheader("📝 Resumen Generado:")
                     st.write(summary_output[0]['summary_text'])
                 except Exception as e:
