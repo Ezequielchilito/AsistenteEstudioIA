@@ -131,6 +131,9 @@ if summarizer is not None: # Solo muestra el botón si el modelo se cargó corre
         if not text_content.strip(): # .strip() quita espacios en blanco para ver si hay texto real
             st.warning("Por favor, sube un archivo o pega texto para generar el resumen.")
         else:
+            st.write("DEBUG: Contenido del texto antes de resumir (primeros 500 caracteres):")
+            st.code(text_content[:500]) # Muestra el inicio del texto
+            st.write(f"DEBUG: Longitud total del texto: {len(text_content)} caracteres")
             with st.spinner("Generando resumen... Por favor, espera."):
                 final_summary = ""
                 try:
